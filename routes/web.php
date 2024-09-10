@@ -50,7 +50,7 @@ Route::get('/events_quizz/{id}', [QuizzController::class, 'events_quizz'])->name
 Route::get('/projects', [ArticlesController::class, 'projects'])->name('projects');
 Route::get('/gallery', [GalleriesController::class, 'gallery'])->name('gallery');
 Route::get('/full_gallery/{title}/{id}', [GalleriesController::class, 'full_gallery'])->name('full_gallery');
-Route::post('/contact', [ArticlesController::class, 'contact'])->name('contact');
+Route::post('contact', [ArticlesController::class, 'contact'])->name('contact');
 Route::get('/booking_login', [UserController::class, 'booking_login'])->name('booking.login');
 Route::post('/booking_auth', [UserController::class, 'booking_auth'])->name('booking.auth');
 Route::get('/booking_room', [UserController::class, 'booking_room'])->middleware('booking_auth')->name('booking.room');
